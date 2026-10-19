@@ -96,6 +96,7 @@ Output_Mode :: enum u8 {
 	O256      = 2,
 	O216      = 3,
 	Grayscale = 4,
+	Truecolor = 5,
 }
 
 Mod :: enum u8 {
@@ -105,16 +106,9 @@ Mod :: enum u8 {
 	Motion = 8,
 }
 
-Color :: enum u64 {
-	Default     = 0x0000,
-	Black       = 0x0001,
-	Red         = 0x0002,
-	Green       = 0x0003,
-	Yellow      = 0x0004,
-	Blue        = 0x0005,
-	Magenta     = 0x0006,
-	Cyan        = 0x0007,
-	White       = 0x0008,
+Color :: u64
+
+ColorModifier :: enum Color {
 	Bold        = 0x01000000,
 	Underline   = 0x02000000,
 	Reverse     = 0x04000000,
@@ -127,6 +121,18 @@ Color :: enum u64 {
 	Underline_2 = 0x0000000200000000,
 	Overline    = 0x0000000400000000,
 	Invisible   = 0x0000000800000000,
+}
+
+NormalColor :: enum Color {
+	Default = 0x0000,
+	Black   = 0x0001,
+	Red     = 0x0002,
+	Green   = 0x0003,
+	Yellow  = 0x0004,
+	Blue    = 0x0005,
+	Magenta = 0x0006,
+	Cyan    = 0x0007,
+	White   = 0x0008,
 }
 
 Status :: enum i32 {
@@ -210,4 +216,3 @@ foreign termboxlib {
 	attr_width :: proc() -> Status ---
 	version :: proc() -> cstring ---
 }
-

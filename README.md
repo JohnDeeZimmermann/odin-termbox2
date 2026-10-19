@@ -1,4 +1,8 @@
 # A odin wrapper for the [termbox2](https://github.com/termbox/termbox2/)
+
+> [!warning] 
+> This is a fork, specifically adjusted for the needs of a personal project of mine. The original is likely more suited for more general use-cases.
+
 (if you encounter any issues, feel free to submit a pr or create an issue!)
 ## Simple example
 1. Clone this repo any where you like (preferably into (odin repo location)/shared) and import it
